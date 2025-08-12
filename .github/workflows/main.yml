@@ -20,11 +20,11 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Build with Maven (skip tests)
-        run: mvn -B package -DskipTests
+      - name: Compile Main.java
+        run: javac src/Main.java
 
-      - name: Run Main class
-        run: java -cp target/classes Main
+      - name: Run Main
+        run: java -cp src Main
 
         
 
